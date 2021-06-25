@@ -1,0 +1,152 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>13) Registration Form </title>
+    <!-- topic style -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300&display=swap" rel="stylesheet">
+    <!-- google icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <!-- content style  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@300&display=swap" rel="stylesheet">
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        body {
+            overflow-x: hidden;
+        }
+
+        .menu {
+            width: 100%;
+            /* height: 10vh; */
+            /* background-color: white; */
+            top: 0;
+            position: fixed;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+
+        }
+
+        .heading {
+            background-color: #fbc531;
+            text-align: center;
+            font-family: 'Rajdhani', sans-serif;
+            padding: 0.5% 0%;
+            font-size: 25px;
+            text-transform: capitalize;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .heading a {
+            font-weight: lighter;
+            text-decoration: none;
+            color: black;
+            background-color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 3%;
+            border-radius: 60% 40% 56% 41% / 48% 41% 58% 52%;
+
+        }
+
+        .container {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Mulish', sans-serif;
+
+
+        }
+        .frm
+        {
+            padding:  2%;
+            background-color: rgb(250, 249, 245);
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+        .but
+        {
+            color: black;
+            background-color: #fbc531;
+            /* text-align: center; */
+            padding: 2% 15%;
+        }
+        .but:hover
+        {
+            cursor: pointer;
+        }
+    </style>
+
+</head>
+
+
+<body>
+    <nav class="menu">
+        <div class="heading">
+            <a href="https://github.com/Nagpal-S/Practical_Project/in/12.html" class="left"><i
+                    class="material-icons">chevron_left</i></a>
+            <h3>13) Registration form </h3>
+            <a href="https://github.com/Nagpal-S/Practical_Project/in/14.html" class="right"><i
+                    class="material-icons">chevron_right</i></a>
+
+        </div>
+    </nav>
+
+
+
+
+    <div class="container">
+        <form name="myForm" onsubmit="validateForm()" class="frm">
+            <label for="name">Enter the Name</label>
+            <input type="text" name="fname" > <br> <br>
+            <label for="username">Enter the Username</label>
+            <input type="text" name="uname" ><br> <br>
+            <label for="password">Enter the Password</label>
+            <input type="text" name="password" ><br> <br>
+            
+            <br> <br> <br>
+            <input type="submit" value="Submit" class="but">
+        </form>
+
+    </div>
+
+    <script>
+        function validateForm() {
+            var x = document.forms["myForm"]["fname"].value;
+            var y = document.forms["myForm"]["uname"].value;
+            var z = document.forms["myForm"]["password"].value;
+            
+            if (x == "") {
+                alert("Name is important, Please fill it first.");
+                return false;
+            }
+            else if (y == "") {
+                alert("Username is important, Please fill it.");
+                return false;
+            }
+            else if (z == "") {
+                alert("Password is important, Please fill it.");
+                return false;
+            }
+            else {
+                alert("Login created")
+            }
+        }
+    </script>
+
+
+</body>
+
+</html>
