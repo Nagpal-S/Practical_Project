@@ -23,13 +23,20 @@
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script>
-        if(screen.height<=863 && screen.width<=1407){
+        if( /Android|webOS|iPhone|iPad|Mac|Macintosh|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
             alert("dffa hoja yaha se");
             window.open('','_parent','');
             window.close();
-        }
+            }
+        // if(screen.height<=863 && screen.width<=1227){
+        //     alert("dffa hoja yaha se");
+        //     window.open('','_parent','');
+        //     window.close();
+        // }
         else{
-            alert("ajo ji");   
+            alert("ajo ji"); 
+            alert(screen.width)  
+            alert(screen.height)  
     }
     </script>
 
